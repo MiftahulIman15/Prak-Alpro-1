@@ -1,25 +1,37 @@
 #include <iostream>
 using namespace std;
-class perulangan {
-public:
-perulangan() { n = 4; }
-void ulang_for(int);
-void ulang_rekursif(int);
-private:
-int n; };
-void perulangan::ulang_for(int n) {
-for (int i = 1; i <=n; i++);
+
+void matkul(string nama,string nim,string nmat){
+    cout <<"Nama anda\t\t\t\t:"<<nama<<endl;
+  cout <<"Nim anda\t\t\t\t:"<<nim<<endl;
+  cout<<"Nama mata kuliah\t:"<<nmat<<endl;
 }
-void perulangan::ulang_rekursif(int n) {
-int i = 4;
-while (i >= n) {
-cout << i << " ";
-i--; }
-}
-int main() {
-perulangan X;
-cout << "Menggunakan cara iteratif\n";
-X.ulang_for(4);
-cout << "\nMenggunakan cara rekursif\n";
-X.ulang_rekursif(4);
-}
+void total(int sks){
+  int biaya,diskon,total;
+  int a=0;
+  if ( a<sks){
+  biaya= sks*120000;
+  diskon=biaya*10/100;
+  total= diskon*5/100;
+  cout<<"Jumlah sks\t\t\t\t:"<<sks<<endl;
+  cout<<"Total\t\t\t\t\t:"<<total<<endl;
+    a=sks;
+}else{
+    return 1;
+}}
+
+int main(){
+	string nim1,nmat;
+  	std::string nama;
+  int sks1;
+  cout<<"Masukkan nama anda:"<<endl;
+    std::getline (std::cin,nama);
+  cout<<"Masukkan nim anda:"<<endl;
+    cin>>nim1;
+   cout<<"Masukkan mata kuliah anda:"<<endl;
+    cin>>nmat;
+  cout<<"Masukkan jumlah sks anda:"<<endl;
+  cin>>sks1;
+   matkul(nama,nim1,nmat);
+  total(sks1);
+    return 0;}
